@@ -20,6 +20,10 @@ echo 'CSS Image Build...'
 cd $SHELL_PATH/css && docker build -t css:$VERSION .
 echo 'CSS Image Build... Done'
 
+echo 'PRODUCT Image Build...'
+cd $SHELL_PATH/product && docker build -t product:$VERSION .
+echo 'PRODUCT Image Build... Done'
+
 echo 'nginx Image Build...'
 cd $SHELL_PATH/nginx  && docker build -t nginx:$VERSION .
 echo 'nginx Image Build... Done'

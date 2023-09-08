@@ -40,6 +40,13 @@ services:
       - "8081:8081"
     networks:
       - fintech
+  product:
+    image: product:1.0.1
+    container_name: product
+    ports:
+      - "8090:8090"
+    networks:
+      - fintech
   nginx:
     image: nginx:1.0.1
     container_name: nginx

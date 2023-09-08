@@ -64,6 +64,13 @@ project(":consumer") {
     }
 }
 
+project(":product") {
+    dependencies {
+        implementation(project(":domain"))
+        implementation(project(":kafka"))
+    }
+}
+
 project(":domain") {
     val jar: Jar by tasks
     val bootJar: org.springframework.boot.gradle.tasks.bundling.BootJar by tasks
